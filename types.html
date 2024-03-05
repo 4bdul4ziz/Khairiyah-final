@@ -32,6 +32,27 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
 </head>
 
 <body class="appear-animate">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    
+                    <script>
+                        $(document).ready(function () {
+                            // Animate the numbers
+                            $('.counter').each(function () {
+                                $(this).prop('Counter', 0).animate({
+                                    Counter: $(this).data('target')
+                                }, {
+                                    duration: 3000,
+                                    easing: 'swing',
+                                    step: function (now) {
+                                        $(this).text(Math.ceil(now));
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+
+
     <!-- Page Loader -->
     <div class="page-loader">
         <div class="loader">Loading...</div>
@@ -44,158 +65,158 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
 
     <!-- Page Wrap -->
     <div class="page" id="top">
-        <!-- Navigation Panel -->
-        <nav class="main-nav dark light-after-scroll transparent stick-fixed wow-menubar wch-unset">
-            <div class="main-nav-sub full-wrapper">
-                <!-- Logo  (* Add your text or image to the link tag. Use SVG or PNG image format. 
+    <!-- Navigation Panel -->
+    <nav class="main-nav dark light-after-scroll transparent stick-fixed wow-menubar wch-unset">
+        <div class="main-nav-sub full-wrapper">
+            <!-- Logo  (* Add your text or image to the link tag. Use SVG or PNG image format. 
                     If you use a PNG logo image, the image resolution must be equal 200% of the visible logo
                     image size for support of retina screens. See details in the template documentation. *) -->
-                <div class="nav-logo-wrap local-scroll">
-                    <a href="index.html" class="logo">
-                        <img src="images/Logo-W.svg" alt="Your Company Logo" width="105" height="34"
-                            class="logo-white" />
-                        <img src="images/Logo-Blu.svg" alt="Your Company Logo" width="105" height="34"
-                            class="logo-dark" />
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="mobile-nav" role="button" tabindex="0">
-                    <i class="mobile-nav-icon"></i>
-                    <span class="visually-hidden">Menu</span>
-                </div>
-
-                <!-- Main Menu -->
-                <div class="inner-nav desktop-nav">
-                    <ul class="clearlist scroll-nav local-scroll" style="text-align: right !important" dir="rtl">
-                        <li>
-                            <a href="#" class="mn-has-sub">الرئيسية<i class="mi-chevron-down"></i></a>
-
-                            <!-- Sub -->
-                            <ul class="mn-sub" style="text-align: right !important" dir="rtl">
-                                <li>
-                                    <a href="#">من نحن</a>
-                                </li>
-                                <li>
-                                    <a href="#">استراتيجية المؤسسة</a>
-                                </li>
-                                <li>
-                                    <a href="#">رؤية المؤسسة</a>
-                                </li>
-                                <li>
-                                    <a href="#">رسالة المؤسسة</a>
-                                </li>
-                                <li>
-                                    <a href="#">أهداف المؤسسة</a>
-                                </li>
-                                <li>
-                                    <a href="#">قيم المؤسسة</a>
-                                </li>
-
-                            </ul>
-                            <!-- End Sub -->
-                        </li>
-                        <li>
-                            <a href="founder.html" class="mn-has-sub">مجلس الأمناء<i class="mi-chevron-down"></i></a>
-
-                            <!-- Sub -->
-                            <ul class="mn-sub" style="text-align: right !important" dir="rtl">
-                                <li>
-                                    <a href="founder.html">رئيس مجلس الأمناء</a>
-                                </li>
-                                <li>
-                                    <a href="founder.html">كلمة رئيس مجلس الأمناء</a>
-                                </li>
-                                <li>
-                                    <a href="founder.html">أعضاء مجلس الأمناء</a>
-                                </li>
-                            </ul>
-                            <!-- End Sub -->
-                        </li>
-                        <li>
-                            <a href="#" class="mn-has-sub">أبرز مجالات الدعم<i class="mi-chevron-down"></i></a>
-
-                            <!-- Sub -->
-                            <ul class="mn-sub" style="text-align: right !important" dir="rtl">
-                                <li>
-                    <a href="types.html#type01">مجال التعليم</a>
-                </li>
-                <li>
-                    <a href="types.html#type02">مجال الصحة</a>
-                </li>
-                <li>
-                    <a href="types.html#type03">مجال أوجه البر</a>
-                </li>
-                <li>
-                    <a href="types.html#type04">مجال الإسكان</a>
-                </li>
-                <li>
-                    <a href="types.html#type05">مجال الاستدامة المالية</a>
-                </li>
-                <li>
-                    <a href="types.html#type06">مجال الجوائز</a>
-                </li>
-                <li>
-                    <a href="types.html#type07">مجال الأشد حاجة</a>
-                </li>
-                <li>
-                  <a href="types.html#type08">مجال الدعم العام</a>
-              </li>
-                            </ul>
-                            <!-- End Sub -->
-                        </li>
-                        <li><a href="projects.html">أثر المؤسسة</a></li>
-                        <li><a href="#">حوكمة المؤسسة</a></li>
-                        <li><a href="#">المحافظ الوقفية</a></li>
-                        <li>
-                            <a href="#" class="mn-has-sub">المركز الإعلامي<i class="mi-chevron-down"></i></a>
-
-                            <!-- Sub -->
-                            <ul class="mn-sub" style="text-align: right !important" dir="rtl">
-                <li>
-                  <a href="media.html#news">الأخبار</a>
-                </li>
-                
-                <li>
-                  <a href="media.html#awards">الجوائز</a>
-                </li>
-                <li>
-                  <a href="#">مكتبة الصور</a>
-                </li>
-                <li>
-                  <a href="#"> مكتبة الفيديو</a>
-                </li>
-                <li>
-                  <a href="#"> التقارير االسنوية</a>
-                </li>
-              </ul>
-              <!-- End Sub -->
-            </li>
-            <li><a href="#contact">تواصل معنا</a></li>
-          </ul>
-                    <ul class="items-end clearlist local-scroll">
-                        <!-- Languages -->
-                        <li>
-                            <a href="#" class="mn-has-sub opacity-1">En <i class="mi-chevron-down"></i></a>
-
-                            <ul class="mn-sub to-left">
-                                <li><a href="#">En</a></li>
-                                <li><a href="#">Ar</a></li>
-                            </ul>
-                        </li>
-                        <!-- End Languages -->
-
-                        <li>
-                            <a href="#contact" class="opacity-1 no-hover">
-                                <span class="link-hover-anim underline" style="font-weight: 900"
-                                    data-link-animate="y">العثيم القابضة</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- End Main Menu -->
+            <div class="nav-logo-wrap local-scroll">
+                <a href="index.html" class="logo">
+                    <img src="images/Logo-W.svg" alt="Your Company Logo" width="105" height="34" class="logo-white" />
+                    <img src="images/Logo-Blu.svg" alt="Your Company Logo" width="105" height="34" class="logo-dark" />
+                </a>
             </div>
-        </nav>
+    
+            <!-- Mobile Menu Button -->
+            <div class="mobile-nav" role="button" tabindex="0">
+                <i class="mobile-nav-icon"></i>
+                <span class="visually-hidden">Menu</span>
+            </div>
+    
+            <!-- Main Menu -->
+            <div class="inner-nav desktop-nav">
+                <ul class="clearlist scroll-nav local-scroll" style="text-align: right !important" dir="rtl">
+                    <li>
+                        <a href="#" class="mn-has-sub">الرئيسية<i class="mi-chevron-down"></i></a>
+    
+                        <!-- Sub -->
+                        <ul class="mn-sub">
+                            <li>
+                                <a href="#">من نحن</a>
+                            </li>
+                            <li>
+                                <a href="#">استراتيجية المؤسسة</a>
+                            </li>
+                            <li>
+                                <a href="#">رؤية المؤسسة</a>
+                            </li>
+                            <li>
+                                <a href="#">رسالة المؤسسة</a>
+                            </li>
+                            <li>
+                                <a href="#">أهداف المؤسسة</a>
+                            </li>
+                            <li>
+                                <a href="#">قيم المؤسسة</a>
+                            </li>
+    
+                        </ul>
+                        <!-- End Sub -->
+                    </li>
+                    <li>
+                        <a href="founder.html" class="mn-has-sub">مجلس الأمناء<i class="mi-chevron-down"></i></a>
+    
+                        <!-- Sub -->
+                        <ul class="mn-sub" style="text-align: right !important" dir="rtl">
+                            <li>
+                                <a href="founder.html">رئيس مجلس الأمناء</a>
+                            </li>
+                            <li>
+                                <a href="founder.html#kalimat">كلمة رئيس مجلس الأمناء</a>
+                            </li>
+                            <li>
+                                <a href="founder.html#board">أعضاء مجلس الأمناء</a>
+                            </li>
+                        </ul>
+                        <!-- End Sub -->
+                    </li>
+                    <li>
+                        <a href="#" class="mn-has-sub">أبرز مجالات الدعم<i class="mi-chevron-down"></i></a>
+    
+                        <!-- Sub -->
+                        <ul class="mn-sub" style="text-align: right !important" dir="rtl">
+                            <li>
+                                <a href="types.html#type01">مجال التعليم</a>
+                            </li>
+                            <li>
+                                <a href="types.html#type02">مجال الصحة</a>
+                            </li>
+                            <li>
+                                <a href="types.html#type03">مجال أوجه البر</a>
+                            </li>
+                            <li>
+                                <a href="types.html#type04">مجال الإسكان</a>
+                            </li>
+                            <li>
+                                <a href="types.html#type05">مجال الاستدامة المالية</a>
+                            </li>
+                            <li>
+                                <a href="types.html#type06">مجال الجوائز</a>
+                            </li>
+                            <li>
+                                <a href="types.html#type07">مجال الأشد حاجة</a>
+                            </li>
+                            <li>
+                                <a href="types.html#type08">مجال الدعم العام</a>
+                            </li>
+                        </ul>
+                        <!-- End Sub -->
+                    </li>
+                    <li><a href="projects.html">أثر المؤسسة</a></li>
+                    <li><a href="#">حوكمة المؤسسة</a></li>
+                    <li><a href="#">المحافظ الوقفية</a></li>
+                    <li>
+                        <a href="#" class="mn-has-sub">المركز الإعلامي<i class="mi-chevron-down"></i></a>
+    
+                        <!-- Sub -->
+                        <ul class="mn-sub" style="text-align: right !important" dir="rtl">
+                            <li>
+                                <a href="media.html#news">الأخبار</a>
+                            </li>
+    
+                            <li>
+                                <a href="media.html#awards">الجوائز</a>
+                            </li>
+                            <li>
+                                <a href="#">مكتبة الصور</a>
+                            </li>
+                            <li>
+                                <a href="#"> مكتبة الفيديو</a>
+                            </li>
+                            <li>
+                                <a href="#"> التقارير االسنوية</a>
+                            </li>
+                        </ul>
+                        <!-- End Sub -->
+                    </li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                </ul>
+    
+                <ul class="items-end clearlist local-scroll">
+                    <!-- Languages -->
+                    <li>
+                        <a href="#" class="mn-has-sub opacity-1">En <i class="mi-chevron-down"></i></a>
+    
+                        <ul class="mn-sub to-left">
+                            <li><a href="#">En</a></li>
+                            <li><a href="#">Ar</a></li>
+                        </ul>
+                    </li>
+                    <!-- End Languages -->
+    
+                    <li>
+                        <a href="#contact" class="opacity-1 no-hover">
+                            <span class="link-hover-anim underline" style="font-weight: 900" data-link-animate="y">العثيم
+                                القابضة</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Main Menu -->
+        </div>
+    </nav>
+    <!-- End Navigation Panel -->
 
         <main id="main">
 
@@ -262,69 +283,54 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
 
 
                     <!-- Portfolio Grid -->
-                    <div class="container-fluid mb-n100 mb-md-n60 mb-sm-n40" style="width: 60%;">
+                    <div class="container-xxl mb-n100 mb-md-n60 mb-sm-n40">
 
-                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-                    
-                    <script>
-                        $(document).ready(function () {
-                            // Animate the numbers
-                            $('.counter').each(function () {
-                                $(this).prop('Counter', 0).animate({
-                                    Counter: $(this).data('target')
-                                }, {
-                                    duration: 2000,
-                                    easing: 'swing',
-                                    step: function (now) {
-                                        $(this).text(Math.ceil(now));
-                                    }
-                                });
-                            });
-                        });
-                    </script>
+                
 
                         <!-- Portfolio Item -->   
-                        <div class="mt-100  mb-100 ">
+                        <div id="type01" class="mt-100  mb-100 ">
 
                             <h3 class="portfolio-3-title font-alt mb-md-10 text-center wow fadeInUp">
                                 <a href="projects.html#boxes">
                                     <span class="wow charsAnimInLong" >
-                                        المجـال التعليمـي
+                                        مجال التعليم
                                     </span>
                                 </a>
                             </h3>
                 
-                            <div class="position-relative border-color-primary-1  round-large overflow-hidden wow fadeInUp" style="padding-top: 4%; 
-                            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5)),url(images/type01.jpeg);">
+                            <div class="position-relative border- round-large text-white overflow-hidden wow fadeInUp" style="padding-top: 4%; 
+                            background-image: linear-gradient(rgba(0, 129, 152, 0.7), rgba(32, 64, 151, 0.7)),url(images/r12.jpeg); background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;">
 
-                                <h3 class="text-center mb-20 wow fadeInUp">المجال أولاً</h3>
-                                <div class="row gx-2 justify-content-center text-center">
+                                <h2 class="text-center numcolor fw-bolder mb-20 wow fadeInUp">المجال أولاً</h2>
+                               <div class="row gx-2 justify-content-center text-center">
                             
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>عدد المشاريع</h4>
                                         <h1><span dir="ltr" class="counter" data-target="4">0</span></h1>
-                                        <h5>مشاريع</h5>
+                                        <h5 class="fw-bold numcolor">مشاريع</h5>
                                     </div>
                                     <!-- End Number Item -->
 
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>إجمالي مبالغ الدعم</h4>
                                         <div class="number-title-custom mb-10">
                                         <h1><span dir="ltr" class="counter" data-target="39570000">0</span></h1>
                                         </div>
-                                        <h5>رياال</h5>
+                                        <h5 class="fw-bold numcolor">رياال</h5>
                                     </div>
                                     <!-- End Number Item -->
 
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>إجمالي المستفيدين</h4>
                                         <div class="number-title-custom mb-10">
                                         <h1><span dir="ltr" class="counter" data-target="4090">0</span></h1>
                                         </div>
-                                        <h5>مستفيدا</h5>
+                                        <h5 class="fw-bold numcolor">مستفيدا</h5>
                                     </div>
                                     <!-- End Number Item -->
 
@@ -336,46 +342,49 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
 
             
                         <!-- Portfolio Item -->   
-                        <div class="mt-100  mb-100 ">
+                        <div id="type02" class="mt-100  mb-100 ">
 
                             <h3 class="portfolio-3-title font-alt mb-md-10 text-center wow fadeInUp">
                                 <a href="projects.html#boxes">
                                     <span class="wow charsAnimInLong" >
-                                        المجـال الصحــي
+                                        مجال الصحة
                                     </span>
                                 </a>
                             </h3>
                 
-                            <div class="position-relative border-color-primary-1  round-large overflow-hidden wow fadeInUp" style="padding-top: 4%;">
+                            <div class="position-relative border- round-large text-white overflow-hidden wow fadeInUp" style="padding-top: 4%; 
+                            background-image: linear-gradient(rgba(0, 129, 152, 0.7), rgba(32, 64, 151, 0.7)),url(images/r17.jpeg); background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;">
 
-                                <h3 class="text-center mb-20 wow fadeInUp">المجال الثاني </h3>
+                                <h2 class="text-center numcolor fw-bolder mb-20 wow fadeInUp">المجال الثاني </h2>
                                 <div class="row gx-2 justify-content-center text-center">
                             
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>عدد المشاريع</h4>
                                         <h1><span dir="ltr" class="counter" data-target="14">0</span></h1>
-                                        <h5>مشاريع</h5>
+                                        <h5 class="fw-bold numcolor">مشاريع</h5>
                                     </div>
                                     <!-- End Number Item -->
 
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>إجمالي مبالغ الدعم</h4>
                                         <div class="number-title-custom mb-10">
                                         <h1><span dir="ltr" class="counter" data-target="129054520">0</span></h1>
                                         </div>
-                                        <h5>رياال</h5>
+                                        <h5 class="fw-bold numcolor">رياال</h5>
                                     </div>
                                     <!-- End Number Item -->
 
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>إجمالي المستفيدين</h4>
                                         <div class="number-title-custom mb-10">
                                         <h1><span dir="ltr" class="counter" data-target="132210">0</span></h1>
                                         </div>
-                                        <h5>مستفيدا</h5>
+                                        <h5 class="fw-bold numcolor">مستفيدا</h5>
                                     </div>
                                     <!-- End Number Item -->
 
@@ -387,57 +396,60 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
 
 
                         <!-- Portfolio Item -->   
-                        <div class="mt-100  mb-100 ">
+                        <div id="type03" class="mt-100  mb-100 ">
 
                             <h3 class="portfolio-3-title font-alt mb-md-10 text-center wow fadeInUp">
                                 <a href="projects.html#boxes">
                                     <span class="wow charsAnimInLong" >
-                                        أوجـــه البــر عامــــة
+                                        مجال أوجه البر
                                     </span>
                                 </a>
                             </h3>
                 
-                            <div class="position-relative border-color-primary-1  round-large overflow-hidden wow fadeInUp" style="padding-top: 4%;">
+                            <div class="position-relative border- round-large text-white overflow-hidden wow fadeInUp" style="padding-top: 4%; 
+                            background-image: linear-gradient(rgba(0, 129, 152, 0.7), rgba(32, 64, 151, 0.7)),url(images/r23.jpeg); background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;">
 
-                                <h3 class="text-center mb-20 wow fadeInUp">المجال ثالث</h3>
-                                <div class="row gx-2 justify-content-center text-center">
+                                <h2 class="text-center numcolor fw-bolder mb-20 wow fadeInUp">المجال ثالث</h2>
+                               <div class="row gx-2 justify-content-center text-center">
                             
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>عدد المشاريع</h4>
                                         <h1><span dir="ltr" class="counter" data-target="27">70</span></h1>
-                                        <h5>مشاريع</h5>
+                                        <h5 class="fw-bold numcolor">مشاريع</h5>
                                     </div>
                                     <!-- End Number Item -->
                                 
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>إجمالي مبالغ الدعم</h4>
                                         <div class="number-title-custom mb-10">
                                         <h1><span dir="ltr" class="counter" data-target="23406000">0</span></h1>
                                         </div>
-                                        <h5>رياال</h5>
+                                        <h5 class="fw-bold numcolor">رياال</h5>
                                     </div>
                                     <!-- End Number Item -->
 
                                     
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>إجمالي المستفيدين</h4>
                                         <div class="number-title-custom mb-10">
                                         <h1><span dir="ltr" class="counter" data-target="1200968">0</span></h1>
                                         </div>
-                                        <h5>مستفيدا</h5>
+                                        <h5 class="fw-bold numcolor">مستفيدا</h5>
                                     </div>
                                     <!-- End Number Item -->
 
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>إجمالي الجهات المستفيدة</h4>
                                         <div class="number-title-custom mb-10">
                                         <h1><span dir="ltr" class="counter" data-target="39">0</span></h1>
                                         </div>
-                                        <h5>جهة غير ربحية</h5>
+                                        <h5 class="fw-bold numcolor">جهة غير ربحية</h5>
                                     </div>
                                     <!-- End Number Item -->
 
@@ -449,46 +461,49 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
 
                         
                         <!-- Portfolio Item -->   
-                        <div class="mt-100  mb-100 ">
+                        <div id="type04" class="mt-100  mb-100 ">
 
                             <h3 class="portfolio-3-title font-alt mb-md-10 text-center wow fadeInUp">
                                 <a href="projects.html#boxes">
                                     <span class="wow charsAnimInLong" >
-                                        السكــن
+                                        مجال الإسكان
                                     </span>
                                 </a>
                             </h3>
                 
-                            <div class="position-relative border-color-primary-1  round-large overflow-hidden wow fadeInUp" style="padding-top: 4%;">
+                            <div class="position-relative border- round-large text-white overflow-hidden wow fadeInUp" style="padding-top: 4%; 
+                            background-image: linear-gradient(rgba(0, 129, 152, 0.7), rgba(32, 64, 151, 0.7)),url(images/r21.jpeg); background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;">
 
-                                <h3 class="text-center mb-20 wow fadeInUp">لمجال الرابع</h3>
+                                <h2 class="text-center numcolor fw-bolder mb-20 wow fadeInUp">لمجال الرابع</h2>                                
                                 <div class="row gx-2 justify-content-center text-center">
                             
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>عدد المشاريع</h4>
                                         <h1><span dir="ltr" class="counter" data-target="1">0</span></h1>
-                                        <h5>مشاريع واحد</h5>
+                                        <h5 class="fw-bold numcolor">مشاريع واحد</h5>
                                     </div>
                                     <!-- End Number Item -->
 
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>إجمالي مبالغ الدعم</h4>
                                         <div class="number-title-custom mb-10">
                                         <h1><span dir="ltr" class="counter" data-target="100000000">0</span></h1>
                                         </div>
-                                        <h5>رياال</h5>
+                                        <h5 class="fw-bold numcolor">رياال</h5>
                                     </div>
                                     <!-- End Number Item -->
 
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>إجمالي المستفيدين</h4>
                                         <div class="number-title-custom mb-10">
                                         <h1><span dir="ltr" class="counter" data-target="5000">0</span></h1>
                                         </div>
-                                        <h5>مستفيدا</h5>
+                                        <h5 class="fw-bold numcolor">مستفيدا</h5>
                                     </div>
                                     <!-- End Number Item -->
 
@@ -500,36 +515,39 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
 
 
                         <!-- Portfolio Item -->   
-                        <div class="mt-100  mb-100 ">
+                        <div id="type05" class="mt-100  mb-100 ">
 
                             <h3 class="portfolio-3-title font-alt mb-md-10 text-center wow fadeInUp">
                                 <a href="projects.html#boxes">
                                     <span class="wow charsAnimInLong" >
-                                        االستدامة المالية
+                                        مجال الاستدامة المالية
                                     </span>
                                 </a>
                             </h3>
                 
-                            <div class="position-relative border-color-primary-1  round-large overflow-hidden wow fadeInUp" style="padding-top: 4%;">
+                            <div class="position-relative border- round-large text-white overflow-hidden wow fadeInUp" style="padding-top: 4%; 
+                            background-image: linear-gradient(rgba(0, 129, 152, 0.7), rgba(32, 64, 151, 0.7)),url(images/type01.jpeg); background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;">
 
-                                <h3 class="text-center mb-20 wow fadeInUp">المجال الخامس</h3>
+                                <h2 class="text-center numcolor fw-bolder mb-20 wow fadeInUp">المجال الخامس</h2>
                                 <div class="row gx-2 justify-content-center text-center">
                             
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>عدد المشاريع</h4>
                                         <h1><span dir="ltr" class="counter" data-target="1">0</span></h1>
-                                        <h5>مشروع واحد</h5>
+                                        <h5 class="fw-bold numcolor">مشروع واحد</h5>
                                     </div>
                                     <!-- End Number Item -->
 
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>إجمالي مبالغ الدعم</h4>
                                         <div class="number-title-custom mb-10">
                                         <h1><span dir="ltr" class="counter" data-target="20000000">0</span></h1>
                                         </div>
-                                        <h5>رياال</h5>
+                                        <h5 class="fw-bold numcolor">رياال</h5>
                                     </div>
                                     <!-- End Number Item -->
 
@@ -541,7 +559,7 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
 
 
                         <!-- Portfolio Item -->   
-                        <div class="mt-100  mb-100 ">
+                        <div id="type06" class="mt-100  mb-100 ">
 
                             <h3 class="portfolio-3-title font-alt mb-md-10 text-center wow fadeInUp">
                                 <a href="projects.html#boxes">
@@ -551,36 +569,39 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
                                 </a>
                             </h3>
                 
-                            <div class="position-relative border-color-primary-1 round-large overflow-hidden wow fadeInUp" style="padding-top: 4%;">
-
-                                <h3 class="text-center mb-20 wow fadeInUp">المجال السادس</h3>
+                            <div class="position-relative border- round-large text-white overflow-hidden wow fadeInUp" style="padding-top: 4%; 
+                            background-image: linear-gradient(rgba(0, 129, 152, 0.7), rgba(32, 64, 151, 0.7)),url(images/r33.jpeg); background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;">
+                            
+                                <h2 class="text-center numcolor fw-bolder mb-20 wow fadeInUp">المجال السادس</h2>
                                 <div class="row gx-2 justify-content-center text-center">
                             
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>عدد المشاريع</h4>
                                         <h1><span dir="ltr" class="counter" data-target="0">0</span></h1>
-                                        <h5>مشاريع</h5>
+                                        <h5 class="fw-bold numcolor">مشاريع</h5>
                                     </div>
                                     <!-- End Number Item -->
 
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>إجمالي مبالغ الدعم</h4>
                                         <div class="number-title-custom mb-10">
                                         <h1><span dir="ltr" class="counter" data-target="0">0</span></h1>
                                         </div>
-                                        <h5>رياال</h5>
+                                        <h5 class="fw-bold numcolor">رياال</h5>
                                     </div>
                                     <!-- End Number Item -->
 
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>إجمالي المستفيدين</h4>
                                         <div class="number-title-custom mb-10">
                                         <h1><span dir="ltr" class="counter" data-target="0">0</span></h1>
                                         </div>
-                                        <h5>مستفيدا</h5>
+                                        <h5 class="fw-bold numcolor">مستفيدا</h5>
                                     </div>
                                     <!-- End Number Item -->
 
@@ -592,46 +613,49 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
 
 
                         <!-- Portfolio Item -->   
-                        <div class="mt-100  mb-100 ">
+                        <div id="type07" class="mt-100  mb-100 ">
 
                             <h3 class="portfolio-3-title font-alt mb-md-10 text-center wow fadeInUp">
                                 <a href="projects.html#boxes">
                                     <span class="wow charsAnimInLong" >
-                                        الفئات األشد حاجة
+                                    مجال الأشد حاجة                                    
                                     </span>
                                 </a>
                             </h3>
                 
-                            <div class="position-relative border-color-primary-1  round-large overflow-hidden wow fadeInUp" style="padding-top: 4%;">
+                            <div class="position-relative border- round-large text-white overflow-hidden wow fadeInUp" style="padding-top: 4%; 
+                            background-image: linear-gradient(rgba(0, 129, 152, 0.7), rgba(32, 64, 151, 0.7)),url(images/r22.jpeg); background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;">
 
-                                <h3 class="text-center mb-20 wow fadeInUp">المجال السابع</h3>
+                                <h2 class="text-center numcolor fw-bolder mb-20 wow fadeInUp">المجال السابع</h2>
                                 <div class="row gx-2 justify-content-center text-center">
                             
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>عدد المشاريع</h4>
                                         <h1><span dir="ltr" class="counter" data-target="7">0</span></h1>
-                                        <h5>مشاريع</h5>
+                                        <h5 class="fw-bold numcolor">مشاريع</h5>
                                     </div>
                                     <!-- End Number Item -->
 
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>إجمالي مبالغ الدعم</h4>
                                         <div class="number-title-custom mb-10">
                                         <h1><span dir="ltr" class="counter" data-target="92350000">0</span></h1>
                                         </div>
-                                        <h5>رياال</h5>
+                                        <h5 class="fw-bold numcolor">رياال</h5>
                                     </div>
                                     <!-- End Number Item -->
 
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>إجمالي المستفيدين</h4>
                                         <div class="number-title-custom mb-10">
                                         <h1><span dir="ltr" class="counter" data-target="863356"></span></h1>
                                         </div>
-                                        <h5>مستفيدا</h5>
+                                        <h5 class="fw-bold numcolor">مستفيدا</h5>
                                     </div>
                                     <!-- End Number Item -->
 
@@ -643,7 +667,7 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
 
 
                         <!-- Portfolio Item -->   
-                        <div class="mt-100  mb-100 ">
+                        <div id="type08" class="mt-100  mb-100 ">
 
                             <h3 class="portfolio-3-title font-alt mb-md-10 text-center wow fadeInUp">
                                 <a href="projects.html#boxes">
@@ -653,36 +677,39 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
                                 </a>
                             </h3>
                 
-                            <div class="position-relative border-color-primary-1  round-large overflow-hidden wow fadeInUp" style="padding-top: 4%;">
+                            <div class="position-relative border- round-large text-white overflow-hidden wow fadeInUp" style="padding-top: 4%; 
+                            background-image: linear-gradient(rgba(0, 129, 152, 0.7), rgba(32, 64, 151, 0.7)),url(images/r10.jpeg); background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;">
 
-                                <h3 class="text-center mb-20 wow fadeInUp">المجال ثامن</h3>
-                                <div class="row gx-2 justify-content-center text-center">
+                                <h2 class="text-center numcolor fw-bolder mb-20 wow fadeInUp">المجال ثامن</h2>
+                               <div class="row gx-2 justify-content-center text-center">
                             
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>عدد المشاريع</h4>
                                         <h1><span dir="ltr" class="counter" data-target="0">0</span></h1>
-                                        <h5>مشاريع</h5>
+                                        <h5 class="fw-bold numcolor">مشاريع</h5>
                                     </div>
                                     <!-- End Number Item -->
 
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>إجمالي مبالغ الدعم</h4>
                                         <div class="number-title-custom mb-10">
                                         <h1><span dir="ltr" class="counter" data-target="0">0</span></h1>
                                         </div>
-                                        <h5>رياال</h5>
+                                        <h5 class="fw-bold numcolor">رياال</h5>
                                     </div>
                                     <!-- End Number Item -->
 
                                     <!-- Number Item -->
-                                    <div class="col-sm-5 col-lg-2 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
+                                    <div class="col-sm-5 col-lg-3 pt-3 px-3 pb-n2 m-3 mb-50 border-color-primary-light-1 round-large wow fadeScaleIn" data-wow-delay="0.5s">
                                         <h4>إجمالي المستفيدين</h4>
                                         <div class="number-title-custom mb-10">
                                         <h1><span dir="ltr" class="counter" data-target="0">0</span></h1>
                                         </div>
-                                        <h5>مستفيدا</h5>
+                                        <h5 class="fw-bold numcolor">مستفيدا</h5>
                                     </div>
                                     <!-- End Number Item -->
 
