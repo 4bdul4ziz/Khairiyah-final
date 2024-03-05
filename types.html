@@ -264,7 +264,24 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
                     <!-- Portfolio Grid -->
                     <div class="container-fluid mb-n100 mb-md-n60 mb-sm-n40" style="width: 60%;">
 
-                
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    
+                    <script>
+                        $(document).ready(function () {
+                            // Animate the numbers
+                            $('.counter').each(function () {
+                                $(this).prop('Counter', 0).animate({
+                                    Counter: $(this).data('target')
+                                }, {
+                                    duration: 2000,
+                                    easing: 'swing',
+                                    step: function (now) {
+                                        $(this).text(Math.ceil(now));
+                                    }
+                                });
+                            });
+                        });
+                    </script>
 
                         <!-- Portfolio Item -->   
                         <div class="mt-100  mb-100 ">
