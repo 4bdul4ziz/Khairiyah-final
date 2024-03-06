@@ -34,23 +34,34 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
 <body class="appear-animate">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-                    
-                    <script>
-                        $(document).ready(function () {
-                            // Animate the numbers
-                            $('.counter').each(function () {
-                                $(this).prop('Counter', 0).animate({
-                                    Counter: $(this).data('target')
-                                }, {
-                                    duration: 3000,
-                                    easing: 'swing',
-                                    step: function (now) {
-                                        $(this).text(Math.ceil(now));
-                                    }
-                                });
-                            });
-                        });
-                    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var scrollDistance = $(window).scrollTop();
+                var elementOffset = $('.counter').offset().top;
+                var distanceFromTop = elementOffset - scrollDistance;
+
+                if (distanceFromTop < $(window).height() - 100) {
+                    startCounterAnimation();
+                }
+            });
+
+            function startCounterAnimation() {
+                $('.counter').each(function () {
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).data('target')
+                    }, {
+                        duration: 8000,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+                });
+            }
+        });
+    </script>
 
 
     <!-- Page Loader -->
